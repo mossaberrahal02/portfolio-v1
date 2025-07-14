@@ -134,11 +134,31 @@ Update CSS variables or color values in `styles.css` to change the theme.
 
 ## 🚀 Deployment
 
-This portfolio can be deployed to any static hosting service:
-- GitHub Pages
-- Netlify
-- Vercel
-- Azure Static Web Apps
+### GitHub Pages (Recommended)
+
+This portfolio is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+#### Setup Instructions:
+
+1. **Enable GitHub Pages**:
+   - Go to your repository settings on GitHub
+   - Navigate to "Pages" in the left sidebar
+   - Under "Source", select "GitHub Actions"
+
+2. **Automatic Deployment**:
+   - The workflow is already configured in `.github/workflows/deploy.yml`
+   - Any push to the `main` branch will trigger automatic deployment
+   - Your portfolio will be available at: `https://mossaberrahal02.github.io/portfolio-v1/`
+
+3. **Manual Deployment**:
+   - Go to the "Actions" tab in your GitHub repository
+   - Select the "Deploy to GitHub Pages" workflow
+   - Click "Run workflow" to deploy manually
+
+#### Other Deployment Options:
+- **Netlify**: Drag and drop the project folder to Netlify
+- **Vercel**: Connect your GitHub repository to Vercel
+- **Azure Static Web Apps**: Use the Azure portal to deploy
 
 ## 📈 Performance Features
 
