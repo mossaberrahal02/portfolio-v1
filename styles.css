@@ -58,6 +58,7 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-link {
@@ -85,6 +86,126 @@ body {
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+/* Language Switcher */
+.language-switcher {
+    position: relative;
+}
+
+.language-dropdown {
+    position: relative;
+}
+
+.language-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #27272a;
+    border: 1px solid #3f3f46;
+    color: #e4e4e7;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.language-btn:hover {
+    background: #3f3f46;
+    border-color: #3b82f6;
+}
+
+.lang-flag {
+    font-size: 1.125rem;
+}
+
+.dropdown-arrow {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.language-btn:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.language-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #18181b;
+    border: 1px solid #3f3f46;
+    border-radius: 0.5rem;
+    min-width: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.language-options.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    color: #e4e4e7;
+    font-size: 0.875rem;
+}
+
+.language-option:hover {
+    background: #27272a;
+}
+
+.language-option:first-child {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.language-option:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .nav-menu {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero-content {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .about-profile {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .language-options {
+    right: auto;
+    left: 0;
+}
+
+[dir="rtl"] .project-header {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero-buttons,
+[dir="rtl"] .project-skills,
+[dir="rtl"] .skill-items,
+[dir="rtl"] .contact-links {
+    flex-direction: row-reverse;
 }
 
 .hamburger {
@@ -576,6 +697,29 @@ section {
     
     .nav-item {
         margin: 1rem 0;
+    }
+    
+    .language-switcher {
+        margin: 1.5rem 0;
+    }
+    
+    .language-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .language-options {
+        position: relative;
+        width: 100%;
+        margin-top: 0.5rem;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+    }
+    
+    .language-options.show {
+        display: block;
     }
     
     .hero-title {
